@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes import user
+from routes import user, auth_user
 
 app = FastAPI()
 
@@ -13,4 +13,5 @@ async def root():
    
 # routes
 app.include_router(user.router)
+app.include_router(auth_user.router)
 
